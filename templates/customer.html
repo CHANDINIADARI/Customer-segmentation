@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer Segmentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+        .segmentation {
+            background: url("https://digitalschoolofmarketing.co.za/wp-content/uploads/2020/11/shutterstock_420395281-copy-e1604390931818.png") 0px 0px no-repeat;
+            background-size: 100%;
+            height: 50vh; /* Adjust the height as needed */
+        }
+        h1 {
+            font-size: 36px; /* Adjust the font size as needed */
+            text-align: center;
+            color: #fbfbfb;
+            margin-top: 20px; /* Adjust the top margin as needed */
+        }
+        /* Increase the font size for the criteria selection text */
+        .criteria-text {
+            font-size: 24px; /* Adjust the font size as needed */
+            text-align: center;
+            color: #ffffff;
+        }
+        /* Style form elements */
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        select {
+            font-size: 16px;
+            padding: 8px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 200px; /* Limit the maximum width of the select elements */
+            margin: 0 auto; /* Center the select elements */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body class="segmentation">
+    <section>
+        <h1>Customer Segmentation</h1>
+        <p class="criteria-text">Please select the criteria you would like to use to segment your customers:</p>
+        <!-- First Form -->
+        <form action="#" method="post">
+            <label for="criteria1">Select criteria:</label>
+            <select name="criteria1" id="criteria1">
+                <option value="age">Age</option>
+                <option value="gender">Gender</option>
+                <option value="Annual income">Annual income</option>
+                <option value="spending score">Spending score</option>
+            </select>
+        </form>
+
+        <!-- Gender confirmation -->
+        <form action="#" method="post">
+            <label for="criteria2">Select gender:</label>
+            <select name="criteria2" id="criteria2">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </form>
+        <!-- Age selection-->
+        <form action="#" method="post">
+            <label for="age">Select Age:</label>
+            <select name="age" id="age">
+                <!-- JavaScript will generate options here -->
+            </select>
+        </form>
+
+        <script>
+            // JavaScript to generate age options from 1 to 100
+            var select = document.getElementById("age");
+
+            for (var i = 1; i <= 100; i++) {
+                var option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                select.appendChild(option);
+            }
+        </script>
+        <!-- Annual Income -->
+        <form action="#" method="post">
+            <label for="annualincome">Select Annual Income(k$):</label>
+            <select name="annualincome" id="annualincome">
+                <!-- JavaScript will generate options here -->
+            </select>
+        </form>
+
+        <script>
+            // JavaScript to generate annual income options from 1 to 100
+            var selectIncome = document.getElementById("annualincome");
+
+            for (var i = 1; i <= 100; i++) {
+                var option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                selectIncome.appendChild(option);
+            }
+        </script>
+        <!-- Spending Score Selection -->
+        <form action="#" method="post">
+            <label for="spendingscore">Select Spending Score:</label>
+            <select name="spendingscore" id="spendingscore">
+                <!-- JavaScript will generate options here -->
+            </select>
+        </form>
+
+        <script>
+            // JavaScript to generate spending score options from 1 to 100
+            var selectScore = document.getElementById("spendingscore");
+
+            for (var i = 1; i <= 100; i++) {
+                var option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                selectScore.appendChild(option);
+            }
+        </script>
+        <div class="button-container">
+            <input type="submit" value="Submit">
+        </div>
+    </section>
+</body>
+</html>
